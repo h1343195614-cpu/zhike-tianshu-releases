@@ -1,21 +1,23 @@
-# 挚科天枢 · 官方版本下载
+# 挚科天枢
 
-此仓库仅发布挚科天枢的 Windows 安装包、更新说明及更新元数据，不存放产品源码或用户数据。
+挚科天枢是面向 Windows 的智能体桌面工作台，可连接已配置的模型进行对话、执行计划任务、组织团队协作并预览生成的文件。本仓库只用于分发正式安装包和应用内更新，不托管产品源码。
 
-## 下载
+## 当前正式版：1.0.1 · Windows x64
 
-前往 [最新正式版本](https://github.com/h1343195614-cpu/zhike-tianshu-releases/releases/latest)，下载 `ZhikeTianshu-版本号-setup.exe`。
+**[下载安装包（ZIP，保留中文文件名）](https://github.com/h1343195614-cpu/zhike-tianshu-releases/releases/download/v1.0.1/ZhikeTianshu-1.0.1-Windows-x64.zip)**　·　[直接下载 EXE](https://github.com/h1343195614-cpu/zhike-tianshu-releases/releases/download/v1.0.1/ZhikeTianshu-1.0.1-setup.exe)　·　[查看版本说明](https://github.com/h1343195614-cpu/zhike-tianshu-releases/releases/tag/v1.0.1)
 
-- 首次安装可自行选择安装目录、桌面快捷方式和是否立即运行。
-- 从旧版升级到 0.7.7，需要手动安装一次；0.7.7 起可在「设置 → 软件更新」中检查后续版本。
-- 软件只检查本仓库的正式 Release，不直接升级未经适配的上游引擎。
-- 下载与安装需要用户确认；运行中的聊天、团队、项目执行及待处理视频任务会阻止安装。
-- 下载使用 GitHub；网络无法连接 GitHub 时，请稍后重试，不会影响已安装版本。
+1. 下载并解压 ZIP，双击 **挚科天枢-1.0.1.exe**。直接下载的 EXE 使用英文文件名，内容完全相同。
+2. 按安装向导选择目录及快捷方式。已在使用的用户请先保存工作，并从系统托盘退出旧程序后再安装。
+3. 安装后可从「设置 → 软件更新」检查后续正式版；无需 GitHub 账户。1.0.1 测试版用户请手动安装本正式版一次。
 
-## 校验与说明
+## 校验下载
 
-每个 Release 附带 `SHA256SUMS.txt`；`latest.yml` 和 `.blockmap` 供软件更新使用，无需手动打开。
+正式版安装程序大小 **506,456,860 字节**。此版未使用 Windows 代码签名。要核对安装文件，请在解压后的目录打开 PowerShell：
 
-安装包目前未配置 Windows 代码签名，系统可能提示未知发布者。请核对下载来源及校验值。
+~~~powershell
+Get-FileHash -Algorithm SHA256 -LiteralPath '.\挚科天枢-1.0.1.exe'
+~~~
 
-开源组件许可证及第三方声明随安装包附带。GitHub 自动生成的 Source code 压缩包仅包含本仓库说明文件，不包含产品源码。
+应得的 SHA-256：`DFA2556FB11B2332C68F3436DF4C6AB68436B9602CA6B99B9D21FF375C7BBE5D`。[全部下载文件校验值](https://github.com/h1343195614-cpu/zhike-tianshu-releases/releases/download/v1.0.1/SHA256SUMS.txt) 也可用于核对 ZIP。
+
+后续版本请以 **[最新正式发行](https://github.com/h1343195614-cpu/zhike-tianshu-releases/releases/latest)** 为准。`latest.yml` 和 `.blockmap` 供客户端自动更新使用，无需手动下载。
